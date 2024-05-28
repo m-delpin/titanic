@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const url = 'https://github.com/m-delpin/titanic/blob/main/passeggeri.json';
+    const url = 'https://github.com/m-delpin/titanic/passeggeri.json';
 
     fetch(url)
         .then(response => response.json())
