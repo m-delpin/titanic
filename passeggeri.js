@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const url = 'https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/tuo-utente/tuo-repository/main/passeggeri.json';
+    const url = 'https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/m-delpin/titanic/main/passeggeri.json';
 
-    fetch(url)
+<    fetch(url)
         .then(response => response.json())
         .then(data => {
             const passengerData = document.getElementById('passenger-data');
