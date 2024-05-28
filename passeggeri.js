@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const url = 'https://raw.githubusercontent.com/tuo-utente/tuo-repository/main/passeggeri.json';
+    const url = 'https://raw.githubusercontent.com/m-delpin/titanic/main/titanic-dataset.json';
 
     fetch(url)
         .then(response => response.json())
