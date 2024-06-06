@@ -4,41 +4,29 @@ body {
     margin: 20px;
 }
 
-.gallery {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.gallery a {
-    margin: 5px;
+.card {
+    background-color: #007BFF; /* Sfondo blu */
+    color: white; /* Testo bianco */
+    border-radius: 8px; /* Bordo arrotondato */
+    padding: 20px; /* Spaziatura interna */
+    margin-bottom: 20px; /* Spaziatura inferiore */
+    max-width: 300px; /* Larghezza massima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra */
 }
 
-.gallery img {
-    width: 100%;
-    height: auto;
-    border: 2px solid #ddd;
-    border-radius: 4px;
+.card-header {
+    text-align: center; /* Centrato */
+    margin-bottom: 10px; /* Spaziatura inferiore */
 }
 
-.gallery-item {
-    flex: 1 1 calc(25% - 10px); /* 25% width minus margin */
-    box-sizing: border-box;
-    max-width: calc(25% - 10px);
-}
-
-@media (max-width: 768px) {
-    .gallery-item {
-        flex: 1 1 calc(50% - 10px); /* 50% width minus margin */
-        max-width: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery-item {
-        flex: 1 1 calc(100% - 10px); /* 100% width minus margin */
-        max-width: calc(100% - 10px);
-    }
+.card-body {
+    text-align: left; /* Allineato a sinistra */
 }
 
 footer {
@@ -59,19 +47,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-.passenger-list {
-    text-align: left;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-.passenger-list th, .passenger-list td {
-    padding: 8px;
-    border: 1px solid #ddd;
-}
-
-.passenger-list th {
-    background-color: #f4f4f4;
 }
