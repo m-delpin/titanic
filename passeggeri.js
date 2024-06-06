@@ -11,37 +11,29 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             console.log('Data fetched successfully:', data);
-            const passengerData = document.getElementById('passenger-data');
+            const container = document.getElementById('passenger-container');
             data.forEach(passenger => {
-                const row = document.createElement('tr');
-                
-                const nameCell = document.createElement('td');
-                nameCell.textContent = passenger.name;
-                row.appendChild(nameCell);
-                
-                const sexCell = document.createElement('td');
-                sexCell.textContent = passenger.sex;
-                row.appendChild(sexCell);
-                
-                const ageCell = document.createElement('td');
-                ageCell.textContent = passenger.age || 'N/A';
-                row.appendChild(ageCell);
-                
-                const embarkedCell = document.createElement('td');
-                embarkedCell.textContent = passenger.embarked;
-                row.appendChild(embarkedCell);
-                
-                const classCell = document.createElement('td');
-                classCell.textContent = passenger.class;
-                row.appendChild(classCell);
-                
-                const survivedCell = document.createElement('td');
-                survivedCell.textContent = passenger.survived ? 'Yes' : 'No';
-                row.appendChild(survivedCell);
-                
-                passengerData.appendChild(row);
+                const card = document.createElement('div');
+                card.classList.add('card');
+
+                const header = document.createElement('div');
+                header.classList.add('card-header');
+                const headerText = document.createElement('h2');
+                headerText.textContent = passenger.Name;
+                header.appendChild(headerText);
+                card.appendChild(header);
+
+                const body = document.createElement('div');
+                body.classList.add('card-body');
+                const details = document.createElement('p');
+                details.innerHTML = `<strong>Sesso:</strong> ${passenger.Sex}<br>
+                                     <strong>Età:</strong> ${passenger.Age || 'N/A'}<br>
+                                     <strong>Sopravvissuto:</strong> ${passenger.Survived ? 'Sì' : 'No'}`;
+                body.appendChild(details);
+                card.appendChild(body);
+
+                container.appendChild(card);
             });
         })
         .catch(error => console.error('Errore nel caricamento dei dati:', error));
 });
-
