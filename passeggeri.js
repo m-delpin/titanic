@@ -1,8 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     const url = './passeggeri.json';
+    console.log('Fetching data from URL:', url);
+
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log('Data fetched successfully:', data);
             const passengerData = document.getElementById('passenger-data');
             data.forEach(passenger => {
                 const row = document.createElement('tr');
@@ -36,3 +44,4 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Errore nel caricamento dei dati:', error));
 });
+
