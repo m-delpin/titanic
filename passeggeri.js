@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const url = 'https://cors-anywhere.herokuapp.com/https://m-delpin.github.io/titanic/passeggeri.json';
+    const url = './passeggeri.json';
     fetch(url)
         .then(response => response.json())
         .then(data => {
