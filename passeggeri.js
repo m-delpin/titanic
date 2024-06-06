@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const url = './passeggeri.json';
+    const url = './test.json';
     console.log('Fetching data from URL:', url);
 
     fetch(url)
