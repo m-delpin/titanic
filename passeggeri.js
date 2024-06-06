@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const url = 'https://cors-anywhere.herokuapp.com/https://m-delpin.github.io/titanic/passeggeri.json';
-
-<    fetch(url)
+    fetch(url)
         .then(response => response.json())
         .then(data => {
             const passengerData = document.getElementById('passenger-data');
